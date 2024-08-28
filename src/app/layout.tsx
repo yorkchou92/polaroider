@@ -9,16 +9,16 @@ import './globals.css'
 const roboto = Roboto({ subsets: ['latin'], weight: ['500', '700', '900'] })
 
 export const metadata: Metadata = {
-  title: 'Polaroider',
+  title: 'INST.AX',
   description: 'A simple app to create Polaroid photos.',
   openGraph: {
-    siteName: 'Polaroider',
+    siteName: 'INST.AX',
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://polaroider.vercel.app',
+    url: 'https://inst.ax',
     images: [
       {
-        url: 'https://polaroider.vercel.app/og-image.png',
+        url: 'https://inst.ax/og-image.png',
         width: 1080,
         height: 540,
         alt: 'Polaroider',

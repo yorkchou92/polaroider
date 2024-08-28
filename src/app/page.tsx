@@ -97,7 +97,7 @@ export default function Home() {
           project
         </p>
         <p>
-          based on
+          based on{' '}
           <a href="https://github.com/davsilvam/polaroider">
             davsilvam/polaroider
           </a>
