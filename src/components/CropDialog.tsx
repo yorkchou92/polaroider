@@ -32,11 +32,10 @@ export function CropDialog({
         <Content className="fixed inset-0 z-20 flex items-center justify-center">
           <div className="flex flex-col-reverse items-center gap-10 rounded-md border border-zinc-100 bg-zinc-100 p-10 shadow-lg md:flex-row">
             <div className="max-w-xs space-y-2">
-              <Title className="text-2xl font-semibold">Ajuste a imagem</Title>
+              <Title className="text-2xl font-semibold">Adjust the image</Title>
 
               <Description className="pb-3">
-                Ajuste a imagem para que ela fique centralizada e com o tamanho
-                desejado.
+                Adjust the image so that it is centered and at the desired size.
               </Description>
 
               <div className="flex w-full items-center gap-5">
@@ -44,14 +43,14 @@ export function CropDialog({
                   onClick={getCroppedImage}
                   className="flex w-fit items-center gap-3 rounded bg-zinc-800 px-5 py-3 text-zinc-50"
                 >
-                  Prosseguir <ArrowUpRight className="h-4 w-4" />
+                  Continue <ArrowUpRight className="h-4 w-4" />
                 </button>
 
                 <Close
                   onClick={clearMetadata}
                   className="flex w-fit items-center gap-3 rounded border border-zinc-900 px-5 py-3 text-zinc-900"
                 >
-                  Fechar <X className="h-4 w-4" />
+                  Close <X className="h-4 w-4" />
                 </Close>
               </div>
             </div>

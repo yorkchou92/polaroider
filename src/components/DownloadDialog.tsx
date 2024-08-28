@@ -32,10 +32,10 @@ export function DownloadDialog({
         <Content className="fixed inset-0 z-20 flex items-center justify-center">
           <div className="flex flex-col-reverse items-center gap-10 rounded-md border border-zinc-100 bg-zinc-100 p-10 shadow-lg md:flex-row">
             <div className="max-w-xs space-y-2">
-              <Title className="text-2xl font-semibold">Aí está!</Title>
+              <Title className="text-2xl font-semibold">Here it is!</Title>
 
               <Description className="pb-3">
-                Você pode baixar sua imagem ou continuar criando recordações!
+                You can download your image or continue creating memories!
               </Description>
 
               <div className="flex w-full items-center gap-5">
@@ -44,14 +44,14 @@ export function DownloadDialog({
                   download="polaroid.png"
                   href={url}
                 >
-                  Baixar Imagem <DownloadCloud className="h-4 w-4" />
+                  Download <DownloadCloud className="h-4 w-4" />
                 </a>
 
                 <Close
                   onClick={clearMetadata}
                   className="flex w-fit items-center gap-3 rounded border border-zinc-900 px-5 py-3 text-zinc-900"
                 >
-                  Fechar <X className="h-4 w-4" />
+                  Close <X className="h-4 w-4" />
                 </Close>
               </div>
             </div>
