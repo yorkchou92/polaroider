@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <main className="flex flex-col flex-grow items-center justify-center bg-zinc-50">
+      <main className="flex flex-grow flex-col items-center justify-center bg-zinc-50">
         <Rainbow />
 
         <div className="z-10 flex w-full flex-col items-center gap-12 px-8">
@@ -88,14 +88,20 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="w-full mt-auto p-4 bg-zinc-100 text-center text-zinc-700">
+      <footer className="mt-auto w-full bg-zinc-100 p-4 text-center text-zinc-700">
         <p>© 2024 Your Company. All rights reserved.</p>
         <p>
-          <a href="https://yourcompany.com/privacy" className="text-blue-600 hover:underline">
+          <a
+            href="https://yourcompany.com/privacy"
+            className="text-blue-600 hover:underline"
+          >
             Privacy Policy
           </a>
           {' | '}
-          <a href="https://yourcompany.com/terms" className="text-blue-600 hover:underline">
+          <a
+            href="https://yourcompany.com/terms"
+            className="text-blue-600 hover:underline"
+          >
             Terms of Service
           </a>
         </p>
