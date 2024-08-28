@@ -62,29 +62,66 @@ export function useCanvas() {
 
   function drawImageOnCanvas(src: string) {
     const img = new Image()
-
     img.setAttribute('src', src)
+
     img.addEventListener('load', () => {
       const canvas = canvasRef.current
-
       if (!canvas) return
 
       const context = canvas.getContext('2d')
-
       if (!context) return
 
-      canvas.width = 464
-      canvas.height = 600
+      // 设置画布尺寸
+      canvas.width = 736
+      canvas.height = 880
 
+      // 填充背景色
       context.fillStyle = 'rgb(248 250 252)'
       context.fillRect(0, 0, canvas.width, canvas.height)
 
-      context.filter = 'sepia(0.6) contrast(1.2) saturate(0.8)'
+      // 应用滤镜并绘制裁剪后的图像
+      context.filter = 'brightness(1.05) saturate(0.8)'
+      context.drawImage(img, 50, 77, 640, 640)
 
-      context.drawImage(img, 32, 32, 400, 400)
+      // 取消滤镜（应用噪声时需要取消滤镜）
+      context.filter = 'none'
 
-      setPolaroidURL(canvas.toDataURL('image/png', 2.0))
+      // 加载背景图像并绘制
+      const background = new Image()
+      background.src = '/polaroids/export/square_scale.png'
+
+      background.addEventListener('load', () => {
+        // 在裁剪后的图像之后绘制背景图像
+        context.drawImage(background, 0, 0, canvas.width, canvas.height)
+
+        // 获取绘制后的图像数据以应用噪声
+        const imageData = context.getImageData(
+          0,
+          0,
+          canvas.width,
+          canvas.height,
+        )
+        applyNoise(context, imageData, 0.1)
+
+        // 最终将合成的图像保存为 URL
+        setPolaroidURL(canvas.toDataURL('image/png', 2.0))
+      })
     })
+  }
+
+  function applyNoise(
+    context: CanvasRenderingContext2D,
+    imageData: ImageData,
+    noiseLevel: number,
+  ): void {
+    const data = imageData.data
+    for (let i = 0; i < data.length; i += 4) {
+      const noise = (Math.random() - 0.5) * noiseLevel * 255
+      data[i] += noise // Red channel
+      data[i + 1] += noise // Green channel
+      data[i + 2] += noise // Blue channel
+    }
+    context.putImageData(imageData, 0, 0)
   }
 
   function clearMetadata() {
