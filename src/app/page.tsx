@@ -88,21 +88,18 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="mt-auto w-full bg-zinc-100 p-4 text-center text-zinc-700">
-        <p>© 2024 Your Company. All rights reserved.</p>
+      <footer className="mt-auto w-full bg-zinc-50 p-4 text-center text-zinc-700">
         <p>
-          <a
-            href="https://yourcompany.com/privacy"
-            className="text-blue-600 hover:underline"
-          >
-            Privacy Policy
-          </a>
-          {' | '}
-          <a
-            href="https://yourcompany.com/terms"
-            className="text-blue-600 hover:underline"
-          >
-            Terms of Service
+          © 2024 a{' '}
+          <b>
+            <a href="https://yorkchou.net">York Chou</a>
+          </b>{' '}
+          project
+        </p>
+        <p>
+          based on
+          <a href="https://github.com/davsilvam/polaroider">
+            davsilvam/polaroider
           </a>
         </p>
       </footer>
