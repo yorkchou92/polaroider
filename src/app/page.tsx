@@ -90,11 +90,11 @@ export default function Home() {
 
       <footer className="mt-auto w-full bg-zinc-50 p-4 text-center text-zinc-700">
         <p>
-          © 2024 a{' '}
+          a{' '}
           <b>
             <a href="https://yorkchou.net">York Chou</a>
           </b>{' '}
-          project
+          project © 2024 Copyright
         </p>
         <p>
           based on{' '}

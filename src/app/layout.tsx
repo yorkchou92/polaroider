@@ -9,16 +9,16 @@ import './globals.css'
 const roboto = Roboto({ subsets: ['latin'], weight: ['500', '700', '900'] })
 
 export const metadata: Metadata = {
-  title: 'INST.AX',
+  title: 'P.OLARO.ID',
   description: 'A simple app to create Polaroid photos.',
   openGraph: {
-    siteName: 'INST.AX',
+    siteName: 'P.OLARO.ID',
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://inst.ax',
+    url: 'https://P.OLARO.ID',
     images: [
       {
-        url: 'https://inst.ax/og-image.png',
+        url: 'https://p.olaro.id/og-image.png',
         width: 1080,
         height: 540,
         alt: 'Polaroider',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={roboto.className}>{children}</body>
+    <body className={roboto.className}>{children}</body>
     </html>
   )
 }
